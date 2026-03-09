@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>SMART LIBRARY MANAGEMENT SYSTEM</h1>
+
+    <div class="rack">
+        <h2>Rack 1</h2>
+
+        <div class="row">
+            <h3>Row 1 - Book: Java Programming</h3>
+            <button onclick="borrowBook('Java Programming')">Scan ID & Borrow</button>
+        </div>
+
+        <div class="row">
+            <h3>Row 2 - Book: Data Structures</h3>
+            <button onclick="borrowBook('Data Structures')">Scan ID & Borrow</button>
+        </div>
+
+        <div class="row">
+            <h3>Row 3 - Book: Web Development</h3>
+            <button onclick="borrowBook('Web Development')">Scan ID & Borrow</button>
+        </div>
+
+    </div>
+
+    <div class="return-section">
+        <h2>Return Book</h2>
+        <input type="text" id="receiptId" placeholder="Enter Receipt ID">
+        <button onclick="returnBook()">Return Book</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
