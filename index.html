@@ -6,36 +6,53 @@
 </head>
 <body>
 
-    <h1>SMART LIBRARY MANAGEMENT SYSTEM</h1>
+<h1>SMART LIBRARY MANAGEMENT SYSTEM</h1>
 
-    <div class="rack">
-        <h2>Rack 1</h2>
+<h2>Available Books</h2>
 
-        <div class="row">
-            <h3>Row 1 - Book: Java Programming</h3>
-            <button onclick="borrowBook('Java Programming')">Scan ID & Borrow</button>
-        </div>
+<div class="rack">
 
-        <div class="row">
-            <h3>Row 2 - Book: Data Structures</h3>
-            <button onclick="borrowBook('Data Structures')">Scan ID & Borrow</button>
-        </div>
-
-        <div class="row">
-            <h3>Row 3 - Book: Web Development</h3>
-            <button onclick="borrowBook('Web Development')">Scan ID & Borrow</button>
-        </div>
-
+    <div class="row">
+        <h3>Java Programming</h3>
+        <p>Status: <span id="status-java">Available</span></p>
+        <button onclick="borrowBook('Java Programming','java')">Borrow</button>
     </div>
 
-    <div class="return-section">
-        <h2>Return Book</h2>
-        <input type="text" id="receiptId" placeholder="Enter Receipt ID">
-        <button onclick="returnBook()">Return Book</button>
+    <div class="row">
+        <h3>Data Structures</h3>
+        <p>Status: <span id="status-dsa">Available</span></p>
+        <button onclick="borrowBook('Data Structures','dsa')">Borrow</button>
     </div>
 
-    <div id="message"></div>
+    <div class="row">
+        <h3>Web Development</h3>
+        <p>Status: <span id="status-web">Available</span></p>
+        <button onclick="borrowBook('Web Development','web')">Borrow</button>
+    </div>
 
-    <script src="script.js"></script>
+</div>
+
+<h2>Return Book</h2>
+
+<input type="text" id="receiptId" placeholder="Enter Receipt ID">
+<button onclick="returnBook()">Return Book</button>
+
+<h2>Borrowed Books</h2>
+
+<table border="1" align="center">
+<tr>
+<th>Receipt ID</th>
+<th>Student ID</th>
+<th>Book</th>
+<th>Date</th>
+</tr>
+<tbody id="borrowTable">
+</tbody>
+</table>
+
+<div id="message"></div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
